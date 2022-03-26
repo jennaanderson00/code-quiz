@@ -37,6 +37,12 @@ function timer() {
     updateUI();
 }
 
+function endTimer() {
+    if (seconds <= 0) {
+        document.getElementById("timer").style.display = "none";
+    }
+}
+
 function updateUI() {
     document.getElementById("timer").innerHTML = seconds;
 }
@@ -65,6 +71,7 @@ function timerPenalty() {
 // function to end game
 function endGame() {
     // display "game over" page
+    endTimer();
     document.getElementById("question").style.display = "none";
     document.getElementById("game-over").style.display = "block"; 
     document.getElementById("submit-initials").addEventListener("click", hiScorePage);
