@@ -18,6 +18,8 @@ const questions = [
 
 var seconds = 120;
 var currentQuestion = 0;
+var score = ((questions[i]) * 10);
+var hiScore = (Math.max(score));
 
 function startGame() {
     // Hide Starting Page/Text
@@ -39,26 +41,19 @@ function updateUI() {
     document.getElementById("timer").innerHTML = seconds;
 }
 
-function isGameOver() {
-    if (seconds <= 0) {
-        alert("game over");
-        // display game end function
-    }
-}
-
 // add if/else function to cycle through questions
 function showQuestions() {
     var questionText = questions[currentQuestion].questionText; 
     // display text in HTML
     alert(questionText);
     //if time left, continue with questions
-    if (/* correct answer is clicked && time > 0*/) {
+    if (/* correct answer is clicked*/ && seconds < 0) {
         currentQuestion++;
     } else if (/*answer is incorrect*/) {
         timerPenalty();
         currentQuestion++;
-    } else (/*time is less than 0*/) {
-        // if time =<0, run end game function
+    } else if (seconds <= 0) {
+        endGame();
     }
 }
 
@@ -66,8 +61,28 @@ function showQuestions() {
 function timerPenalty() {
     seconds -= 20;
 }
-// function to end game
-// display "game over" page
-// initials input
 
-// function to store high score    
+// function to end game
+function endGame() {
+    // display "game over" page
+    document.getElementById("question").style.display = "none";
+    document.getElementById("game-over").style.display = "block"; 
+    document.getElementById("submit-initials").addEventListener("click", hiScorePage);
+}
+
+// function to store score 
+function createScore() {
+    if (score > hiScore) {
+        Set(hiScore = (score += document.getElementById("initials")));
+    } else {
+        Set(score += document.getElementById("initials"));
+    }
+}
+
+// function to show high score page
+function hiScorePage() {
+    document.getElementById("game-over").style.display = "none";
+    document.getElementById("hi-score").style.display = "block";
+    document.getElementById("current-hi-score").innerHTML = fetch(hiScore);
+    document.getElementById("player-score").innerHTML = (score);
+}   
