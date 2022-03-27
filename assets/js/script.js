@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function timer() {
         seconds--; 
         updateUI();
+    }
 
     function endTimer() {
         if (seconds <= 0) {
