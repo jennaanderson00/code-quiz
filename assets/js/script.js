@@ -19,7 +19,6 @@ const questions = [
 var seconds = 120;
 var currentQuestion = 0;
 var score = ((questions[i]) * 10);
-var hiScore = (Math.max(score));
 
 function startGame() {
     // Hide Starting Page/Text
@@ -77,6 +76,7 @@ function endGame() {
     document.getElementById("submit-initials").addEventListener("click", hiScorePage);
 }
 
+// function to create score
 // function to store score 
 function createScore() {
     if (score > hiScore) {
