@@ -31,13 +31,13 @@ document.addEventListener('DOMContentLoaded', (event) => {
         // Start Timer
         setInterval(() => { timer(); }, 1000);
         // Start Showing Questions 
+        document.getElementById("question").style.display = "block";
         showQuestions();
     }
 
     function timer() {
         seconds--; 
         updateUI();
-    }
 
     function endTimer() {
         if (seconds <= 0) {
@@ -49,7 +49,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("timer").innerHTML = seconds;
     }
 
-    // Add if/else function to cycle through questions
     function showQuestions() {
         // Display text in HTML
         document.getElementById("question-title").innerHTML = questions[0].questionText;
@@ -57,7 +56,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("answer-2").innerHTML = questions[0].options[1];
         document.getElementById("answer-3").innerHTML = questions[0].options[2];
         document.getElementById("answer-4").innerHTML = questions[0].options[3];
-        
+
         function answers() {
             if (document.getElementById("answer-2").clicked == true) {
                  showQuestions2();
@@ -68,7 +67,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         }
 
-       document.getElementById("answers").addEventListener("click", answers());
+        document.getElementById("answer-2").addEventListener("click", answers);
     }
 
     function showQuestions2() {
