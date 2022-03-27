@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     // Start game
     document.getElementById("start-button").addEventListener('click', startGame);
 
-    // add questions here
+    // Add questions here
     const questions = [
         {questionText: "Question 1", options: ["Option 1","Option 2"], answer: 1}, 
         {questionText: "Question 2", options: ["Option 1","Option 2"], answer: 0},
@@ -31,7 +31,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("start-quiz").style.display = "none";
         // Start Timer
         setInterval(() => { timer(); }, 1000);
-        // Display Timer
         // Start Showing Questions 
         showQuestions();
     }
@@ -52,15 +51,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("timer").innerHTML = seconds;
     }
 
-    // add if/else function to cycle through questions
+    // Add if/else function to cycle through questions
     function showQuestions() {
         var questionText = questions[currentQuestion].questionText; 
-        // display text in HTML
+        // Display text in HTML
         alert(questionText);
-        //if time left, continue with questions
-        if (/* correct answer is clicked*/ && seconds < 0) {
+        // If time left, continue with questions
+        if (/*Correct answer is clicked*/ && seconds < 0) {
             currentQuestion++;
-        } else if (/*answer is incorrect*/) {
+        } else if (/*Answer is incorrect*/) {
             timerPenalty();
             currentQuestion++;
         } else if (seconds <= 0) {
@@ -68,21 +67,21 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
-    // function to subtract time when answered incorrectly
+    // Function to subtract time when answered incorrectly
     function timerPenalty() {
         seconds -= 20;
     }
 
-    // function to end game
+    // Function to end game
     function endGame() {
-        // display "game over" page
+        // Display "game over" page
         endTimer();
         document.getElementById("question").style.display = "none";
         document.getElementById("game-over").style.display = "block"; 
         document.getElementById("submit-initials").addEventListener("click", hiScorePage);
     }
 
-    // function to create score and high score
+    // Function to create score and high score
     function createHiScore() {
         if (score > hiScore) {
             hiScore = (score += document.getElementById("initials"));
@@ -93,7 +92,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         }
     }
 
-    // function to show high score page
+    // Function to show high score page
     function hiScorePage() {
         document.getElementById("game-over").style.display = "none";
         document.getElementById("hi-score").style.display = "block";
