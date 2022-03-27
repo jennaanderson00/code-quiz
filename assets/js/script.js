@@ -63,7 +63,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             document.getElementById("answer-3").addEventListener("click", timerPenalty);
             document.getElementById("answer-4").addEventListener("click", timerPenalty);
         }
-    }
+    } 
     function showQuestions() {
         // Display text in HTML
         document.getElementById("question-title").innerHTML = questions[0].questionText;
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
         checkTime();
     }
 
-    function listeners2() {
+   function listeners2() {
         if (showQuestions2 = true) {
             document.getElementById("answer-1").addEventListener("click", showQuestions3);
             document.getElementById("answer-2").addEventListener("click", timerPenalty);
