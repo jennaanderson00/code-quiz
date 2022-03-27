@@ -55,7 +55,10 @@ document.addEventListener('DOMContentLoaded', (event) => {
     function showQuestions() {
         var questionText = questions[currentQuestion].questionText; 
         // Display text in HTML
-        alert(questionText);
+        document.getElementById("question-title").innerHTML = questions[0];
+        if (document.getElementById("question-title").innerHTML = questions[0] /* and option is correct*/) {
+
+        }
         // If time left, continue with questions
         if (/*Correct answer is clicked*/ && seconds < 0) {
             currentQuestion++;
