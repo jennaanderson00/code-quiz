@@ -10,16 +10,16 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Add questions here
     const questions = [
-        {questionText: "Question 1", options: ["Option 1","Option 2"], answer: 1}, 
-        {questionText: "Question 2", options: ["Option 1","Option 2"], answer: 0},
-        {questionText: "Question 3", options: ["Option 1","Option 2"], answer: 2},
-        {questionText: "Question 4", options: ["Option 1","Option 2"], answer: 3},
-        {questionText: "Question 5", options: ["Option 1","Option 2"], answer: 4},
-        {questionText: "Question 6", options: ["Option 1","Option 2"], answer: 5}, 
-        {questionText: "Question 7", options: ["Option 1","Option 2"], answer: 6},
-        {questionText: "Question 8", options: ["Option 1","Option 2"], answer: 7},
-        {questionText: "Question 9", options: ["Option 1","Option 2"], answer: 8},
-        {questionText: "Question 10", options: ["Option 1","Option 2"], answer: 9}
+        {questionText: "What does HTML stand for?", options: ["HyperTree Markup Language", "HyperText Markup Language", "HyperTrue Markup List" , "HyperTest Markup List"], answer: 1}, 
+        {questionText: "To horizontally center content in a flexbox, which of the following is used in CSS?", options: ["justify-content:center;", "justify-content:flex-start;", "align-items:center;", "align-items:flex-end;"], answer: 0},
+        {questionText: "If two different colors are applied to the same background in CSS, which will be used?", options: ["The rule written first", "The darkest color", "The lightest color", "The rule written last"], answer: 3},
+        {questionText: "What is contained within a README?", options: ["Information about the application/site", "Information about functionality", "Anything the developer wants Users to know", "All of the above"], answer: 3},
+        {questionText: "Within the context of coding, what is a string?", options: ["A group of text", "A piece of yarn", "Text and numbers contained within quotes", "A wire on an instrument that makes noise"], answer: 2},
+        {questionText: "What does CSS stand for?", options: ["Cascading Style Sheets", "Cascading Style Scroll", "Cascading Style Script", "Cascading Style Storage"], answer: 0}, 
+        {questionText: "Where is CSS usually linked within the HTML?", options: ["The body tag", "The head tag", "The footer element within the body tag", "A div element within the body tag"], answer: 1},
+        {questionText: "How are comments made in HTML?", options: ["Between <!-- and --!>", "Between /*-- and --*/", "In the README file", "Between /! and !/"], answer: 0},
+        {questionText: "What does API stand for?", options: ["Associate Programming Interface", "Analog Programming Interface", "Additional Programming Interface", "Application Programming Interface"], answer: 3},
+        {questionText: "Which of the following can use global scope, but not block scope?", options: ["const", "function", "var", "document"], answer: 2}
     ];
 
     var seconds = 120;
