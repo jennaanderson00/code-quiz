@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
     ];
 
     var seconds = 120;
-    var score = ((questions[i]) * 10);
+    var score = (seconds * 10);
 
     function startGame() {
         // Hide Starting Page/Text
@@ -36,7 +36,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     function timer() {
         seconds--; 
-        isGameOver();
         updateUI();
     }
 
@@ -58,16 +57,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("answer-2").innerHTML = questions[0].options[1];
         document.getElementById("answer-3").innerHTML = questions[0].options[2];
         document.getElementById("answer-4").innerHTML = questions[0].options[3];
-       
-       document.getElementById(answers).addEventListener("click", function answers() {
-           if (document.getElementById("answer-2").clicked == true) {
-                showQuestions2();
-           } else if (document.getElementById("answer-2").clicked == false) {
-                timerPenalty();
-           } else if (seconds <= 0) {
-               endGame();
-           }
-       })
+        
+        function answers() {
+            if (document.getElementById("answer-2").clicked == true) {
+                 showQuestions2();
+            } else if (document.getElementById("answer-2").clicked == false) {
+                 timerPenalty();
+            } else if (seconds <= 0) {
+                endGame();
+            }
+        }
+
+       document.getElementById("answers").addEventListener("click", answers());
     }
 
     function showQuestions2() {
@@ -78,15 +79,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("answer-3").innerHTML = questions[1].options[2];
         document.getElementById("answer-4").innerHTML = questions[1].options[3];
        
-       document.getElementById(answers).addEventListener("click", function answers() {
-           if (document.getElementById("answer-1").clicked == true) {
-                showQuestions3();
-           } else if (document.getElementById("answer-1").clicked == false) {
-                timerPenalty();
-           } else if (seconds <= 0) {
-               endGame();
-           }
-       })
+        function answers2() {
+            if (document.getElementById("answer-1").clicked == true) {
+                 showQuestions3();
+            } else if (document.getElementById("answer-1").clicked == false) {
+                 timerPenalty();
+            } else if (seconds <= 0) {
+                endGame();
+            }
+        }
+
+       document.getElementById("answers").addEventListener("click", answers2());
     }
 
     function showQuestions3() {
@@ -97,15 +100,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("answer-3").innerHTML = questions[2].options[2];
         document.getElementById("answer-4").innerHTML = questions[2].options[3];
        
-       document.getElementById(answers).addEventListener("click", function answers() {
-           if (document.getElementById("answer-4").clicked == true) {
-                showQuestions4();
-           } else if (document.getElementById("answer-4").clicked == false) {
-                timerPenalty();
-           } else if (seconds <= 0) {
-               endGame();
-           }
-       })
+        function answers3() {
+            if (document.getElementById("answer-4").clicked == true) {
+                 showQuestions4();
+            } else if (document.getElementById("answer-4").clicked == false) {
+                 timerPenalty();
+            } else if (seconds <= 0) {
+                endGame();
+            }
+        }
+
+       document.getElementById("answers").addEventListener("click", answers3());
     }
 
     function showQuestions4() {
@@ -116,15 +121,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("answer-3").innerHTML = questions[3].options[2];
         document.getElementById("answer-4").innerHTML = questions[3].options[3];
        
-       document.getElementById(answers).addEventListener("click", function answers() {
-           if (document.getElementById("answer-4").clicked == true) {
-                showQuestions5();
-           } else if (document.getElementById("answer-4").clicked == false) {
-                timerPenalty();
-           } else if (seconds <= 0) {
-               endGame();
-           }
-       })
+        function answers4() {
+            if (document.getElementById("answer-4").clicked == true) {
+                 showQuestions5();
+            } else if (document.getElementById("answer-4").clicked == false) {
+                 timerPenalty();
+            } else if (seconds <= 0) {
+                endGame();
+            }
+        }
+
+       document.getElementById("answers").addEventListener("click", answers4());
     }
 
     function showQuestions5() {
@@ -135,15 +142,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("answer-3").innerHTML = questions[4].options[2];
         document.getElementById("answer-4").innerHTML = questions[4].options[3];
        
-       document.getElementById(answers).addEventListener("click", function answers() {
-           if (document.getElementById("answer-3").clicked == true) {
-                showQuestions6();
-           } else if (document.getElementById("answer-3").clicked == false) {
-                timerPenalty();
-           } else if (seconds <= 0) {
-               endGame();
-           }
-       })
+        function answers5() {
+            if (document.getElementById("answer-3").clicked == true) {
+                 showQuestions6();
+            } else if (document.getElementById("answer-3").clicked == false) {
+                 timerPenalty();
+            } else if (seconds <= 0) {
+                endGame();
+            }
+        }
+
+       document.getElementById("answers").addEventListener("click", answers5());
     }
 
     function showQuestions6() {
@@ -154,15 +163,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("answer-3").innerHTML = questions[5].options[2];
         document.getElementById("answer-4").innerHTML = questions[5].options[3];
        
-       document.getElementById(answers).addEventListener("click", function answers() {
-           if (document.getElementById("answer-1").clicked == true) {
-                showQuestions7();
-           } else if (document.getElementById("answer-1").clicked == false) {
-                timerPenalty();
-           } else if (seconds <= 0) {
-               endGame();
-           }
-       })
+        function answers6() {
+            if (document.getElementById("answer-1").clicked == true) {
+                 showQuestions7();
+            } else if (document.getElementById("answer-1").clicked == false) {
+                 timerPenalty();
+            } else if (seconds <= 0) {
+                endGame();
+            }
+        }
+
+       document.getElementById("answers").addEventListener("click", answers6());
     }
 
     function showQuestions7() {
@@ -173,15 +184,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("answer-3").innerHTML = questions[6].options[2];
         document.getElementById("answer-4").innerHTML = questions[6].options[3];
        
-       document.getElementById(answers).addEventListener("click", function answers() {
-           if (document.getElementById("answer-2").clicked == true) {
-                showQuestions8();
-           } else if (document.getElementById("answer-2").clicked == false) {
-                timerPenalty();
-           } else if (seconds <= 0) {
-               endGame();
-           }
-       })
+        function answers7() {
+            if (document.getElementById("answer-2").clicked == true) {
+                 showQuestions8();
+            } else if (document.getElementById("answer-2").clicked == false) {
+                 timerPenalty();
+            } else if (seconds <= 0) {
+                endGame();
+            }
+        }
+
+       document.getElementById("answers").addEventListener("click", answers7());
     }
 
     function showQuestions8() {
@@ -192,15 +205,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("answer-3").innerHTML = questions[7].options[2];
         document.getElementById("answer-4").innerHTML = questions[7].options[3];
        
-       document.getElementById(answers).addEventListener("click", function answers() {
-           if (document.getElementById("answer-1").clicked == true) {
-                showQuestions9();
-           } else if (document.getElementById("answer-1").clicked == false) {
-                timerPenalty();
-           } else if (seconds <= 0) {
-               endGame();
-           }
-       })
+        function answers8() {
+            if (document.getElementById("answer-1").clicked == true) {
+                 showQuestions9();
+            } else if (document.getElementById("answer-1").clicked == false) {
+                 timerPenalty();
+            } else if (seconds <= 0) {
+                endGame();
+            }
+        }
+
+       document.getElementById("answers").addEventListener("click", answers8());
     }
 
     function showQuestions9() {
@@ -211,15 +226,17 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("answer-3").innerHTML = questions[8].options[2];
         document.getElementById("answer-4").innerHTML = questions[8].options[3];
        
-       document.getElementById(answers).addEventListener("click", function answers() {
-           if (document.getElementById("answer-4").clicked == true) {
-                showQuestions10();
-           } else if (document.getElementById("answer-4").clicked == false) {
-                timerPenalty();
-           } else if (seconds <= 0) {
-               endGame();
-           }
-       })
+        function answers9() {
+            if (document.getElementById("answer-4").clicked == true) {
+                 showQuestions10();
+            } else if (document.getElementById("answer-4").clicked == false) {
+                 timerPenalty();
+            } else if (seconds <= 0) {
+                endGame();
+            }
+        }
+
+       document.getElementById("answers").addEventListener("click", answers9());
     }
 
     function showQuestions10() {
@@ -230,13 +247,15 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("answer-3").innerHTML = questions[9].options[2];
         document.getElementById("answer-4").innerHTML = questions[9].options[3];
        
-       document.getElementById(answers).addEventListener("click", function answers() {
-           if (document.getElementById("answer-3").clicked == true || seconds <=0) {
-                endGame();
-           } else if (document.getElementById("answer-3").clicked == false) {
-                timerPenalty();
-           } 
-       })
+        function answers10() {
+            if (document.getElementById("answer-3").clicked == true || seconds <=0) {
+                 endGame();
+            } else if (document.getElementById("answer-3").clicked == false) {
+                 timerPenalty();
+            } 
+        }
+
+       document.getElementById("answers").addEventListener("click", answers10());
     }
 
     // Function to subtract time when answered incorrectly
