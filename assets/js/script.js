@@ -58,7 +58,18 @@ document.addEventListener('DOMContentLoaded', (event) => {
         document.getElementById("answer-3").innerHTML = questions[0].options[2];
         document.getElementById("answer-4").innerHTML = questions[0].options[3];
 
-        function answers() {
+        // Event Listeners
+        document.getElementById("answer-1").addEventListener("click", timerPenalty);
+        document.getElementById("answer-2").addEventListener("click", showQuestions2);
+        document.getElementById("answer-3").addEventListener("click", timerPenalty);
+        document.getElementById("answer-4").addEventListener("click", timerPenalty);
+        
+        // If timer runs out
+        if (seconds < 0) {
+            endGame();
+        }
+
+        /* function answers() {
             if (document.getElementById("answer-2").clicked == true) {
                  showQuestions2();
             } else if (document.getElementById("answer-2").clicked == false) {
@@ -68,7 +79,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
             }
         }
 
-        document.getElementById("answer-2").addEventListener("click", answers);
+        document.getElementById("answer-1", "answer-2", "answer-3", "answer-4").addEventListener("click", answers); */
     }
 
     function showQuestions2() {
