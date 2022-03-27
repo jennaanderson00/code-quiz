@@ -1,0 +1,55 @@
+:root {
+    --font-1: 'Prompt', sans-serif;
+    --font-2: 'Press Start 2P';
+    --color-1: #FD0606;
+    --color-2: #000000;
+}
+
+#start-quiz-title {
+    font-style: oblique;
+}
+
+#start-quiz-title, #game-over-header, #hi-score-title {
+    font-size: 60px;
+}
+
+#start-quiz-title, #timer, #game-over-header, #hi-score-title, #your-score-title {
+    font-family: var(--font-2);
+    display: flex;
+    justify-content: center;
+    color: var(--color-1);
+}
+
+#start-quiz-p, #question-title, #current-hi-score, #player-score {
+    font-family: var(--font-1);
+    font-style: bold;
+    font-size: 25px;
+    color: var(--color-2);
+    display: flex;
+    justify-content: center;
+}
+
+#buttondiv, #questions, #answers, #game-over {
+    display: flex;
+    justify-content: center;
+}
+
+#start-button, #answer-1, #answer-2, #answer-3, #answer-4, #submit-initials, #play-again-btn {
+    background-color: var(--color-1);
+}
+
+#start-button, #answer-1, #answer-2, #answer-3, #answer-4, #initials-form, #submit-initials, #play-again-btn { 
+    border: 1px solid var(--color-2);
+    border-radius: 15px;
+    font-family: var(--font-1);
+    font-size: 20px;
+    color: var(--color-2);
+}
+
+#timer {
+    font-size: 40px;
+}
+
+#your-score-title {
+    font-size: 40px;
+}

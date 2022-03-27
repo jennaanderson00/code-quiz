@@ -6,14 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!--link stylesheets here-->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <!--google fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Prompt:wght@200&display=swap" rel="stylesheet">
 </head>
 <body>
     <div id="timer">
         
     </div>
     <div id="start-quiz">
-        <p>To start quiz, press the button</p>
-        <button id="start-button">Start quiz</button>
+        <p id="start-quiz-title">code race</p>
+        <p id="start-quiz-p">how fast can you reach the finish line?</p>
+        <div id="buttondiv">
+            <button id="start-button">ready, start your engine, go!</button>
+        </div>
     </div>
 
     <div id="question">
@@ -29,23 +37,27 @@
     </div>
 
     <div id="game-over">
-        <form>
+        <div id="game-over-header">
+            <p>GAME OVER</p>
+        </div>
+        <form id="initials-form">
             <label for="initials">Your initials:</label><br>
             <input type="text" id="initials" name="initials">
         </form>
         <button id="submit-initials">Save your score</button>
     </div>
+
     <div id="hi-score">
         <section id="hi-score-header">
-            <p>HIGH SCORE</p>
+            <p id="hi-score-title">HIGH SCORE</p>
             <div id="current-hi-score"></div>
         </section>
         <section id="your-score">
-            <p>Your score:</p>
+            <p id="your-score-title">your score:</p>
             <div id="player-score"></div>
         </section>
         <div id="play-again">
-            <button id="play-again-btn">Play again</button>
+            <button id="play-again-btn">play again</button>
         </div>
     </div>
 <script type="text/javascript" src="assets/js/script.js"></script>
