@@ -274,6 +274,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Function to create score and high score
     function createHiScore() {
+        var hiScore = 0;
         if (score > hiScore) {
             hiScore = (score += document.getElementById("initials"));
             localStorage.setItem(hiScore);
@@ -285,6 +286,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
 
     // Function to show high score page
     function hiScorePage() {
+        createHiScore();
         document.getElementById("game-over").style.display = "none";
         document.getElementById("hi-score").style.display = "block";
         document.getElementById("current-hi-score").innerHTML = localStorage.getItem(hiScore);
