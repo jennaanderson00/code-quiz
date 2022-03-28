@@ -29,7 +29,7 @@
     justify-content: center;
 }
 
-#buttondiv, #questions, #answers, #game-over {
+#buttondiv, #questions, #answers, #game-over, #initials-form, #submit-initials, #hi-score-header, #your-initials, #play-again {
     display: flex;
     justify-content: center;
 }
